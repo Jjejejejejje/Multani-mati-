@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multani Mitti — India Full Market Report 2025–26</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --clay:      #C7622A;
+    --clay-lt:   #F2E4D8;
+    --clay-dk:   #7A3410;
+    --earth:     #8B6914;
+    --earth-lt:  #F5EDD4;
+    --sage:      #3A7D44;
+    --sage-lt:   #DDF0E2;
+    --ink:       #1A1410;
+    --ink-mid:   #4A3F35;
+    --ink-lt:    #8A7A6E;
+    --paper:     #FDFAF6;
+    --paper-dk:  #F0EBE3;
+    --white:     #FFFFFF;
+    --border:    rgba(26,20,16,0.1);
+    --highlight: #FFEAA0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--ink);
+    color: var(--white);
+    padding: 64px 60px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 50%, #C7622A33, transparent);
+  }
+  .cover-eyebrow {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--clay); font-weight: 600; margin-bottom: 18px;
+  }
+  .cover-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 52px; font-weight: 800; line-height: 1.05;
+    color: var(--white); margin-bottom: 16px;
+    position: relative;
+  }
+  .cover-title span { color: var(--clay); }
+  .cover-sub {
+    font-size: 16px; color: rgba(255,255,255,0.65);
+    max-width: 540px; line-height: 1.7; margin-bottom: 40px;
+  }
+  .cover-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pill {
+    display: inline-block;
+    padding: 5px 14px; border-radius: 99px; font-size: 12px; font-weight: 500;
+  }
+  .pill-clay  { background: var(--clay); color: #fff; }
+  .pill-sage  { background: var(--sage); color: #fff; }
+  .pill-earth { background: var(--earth); color: #fff; }
+  .pill-out   { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.8); }
+
+  /* ── BODY ── */
+  .report-body { max-width: 960px; margin: 0 auto; padding: 48px 40px 80px; }
+
+  /* section head */
+  .sec-head {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px; margin-top: 48px;
+  }
+  .sec-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+    color: var(--clay); text-transform: uppercase;
+    border-top: 2px solid var(--clay); padding-top: 5px; white-space: nowrap;
+  }
+  .sec-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px; font-weight: 700; color: var(--ink);
+  }
+
+  /* ── KPI STRIP ── */
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-bottom: 32px;
+  }
+  .kpi {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px 18px;
+  }
+  .kpi-label { font-size: 11px; color: var(--ink-lt); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+  .kpi-value { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+  .kpi-sub { font-size: 11px; color: var(--ink-lt); }
+  .kpi.accent { background: var(--clay); border-color: var(--clay); }
+  .kpi.accent .kpi-label { color: rgba(255,255,255,0.7); }
+  .kpi.accent .kpi-value { color: #fff; }
+  .kpi.accent .kpi-sub { color: rgba(255,255,255,0.65); }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight {
+    background: var(--highlight);
+    border-left: 4px solid var(--earth);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--ink);
+    margin: 20px 0;
+    line-height: 1.6;
+  }
+  .highlight strong { color: var(--clay-dk); }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 22px; overflow: hidden;
+  }
+  .card-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+  /* ── BAR CHART ── */
+  .bar-chart { display: flex; flex-direction: column; gap: 10px; }
+  .bar-row { display: grid; grid-template-columns: 130px 1fr 60px; align-items: center; gap: 10px; }
+  .bar-lbl { font-size: 12px; color: var(--ink-mid); text-align: right; }
+  .bar-track { height: 10px; background: var(--paper-dk); border-radius: 5px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 5px; transition: width 1s ease; }
+  .bar-val { font-size: 12px; font-weight: 600; color: var(--ink); }
+
+  /* ── DONUT CHART (CSS) ── */
+  .donut-wrap { display: flex; align-items: center; gap: 24px; }
+  .donut-svg { flex-shrink: 0; }
+  .donut-legend { display: flex; flex-direction: column; gap: 8px; }
+  .dl-row { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink-mid); }
+  .dl-swatch { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .dl-pct { font-weight: 600; color: var(--ink); margin-left: auto; min-width: 30px; text-align: right; }
+
+  /* ── TABLE ── */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--ink-lt); padding: 8px 12px; border-bottom: 1px solid var(--paper-dk); }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--paper-dk); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--paper); }
+  .td-bold { font-weight: 600; color: var(--ink); }
+
+  /* ── BADGE ── */
+  .badge {
+    display: inline-block; padding: 2px 9px;
+    border-radius: 99px; font-size: 11px; font-weight: 500;
+  }
+  .b-clay  { background: var(--clay-lt); color: var(--clay-dk); }
+  .b-sage  { background: var(--sage-lt); color: var(--sage); }
+  .b-earth { background: var(--earth-lt); color: var(--earth); }
+  .b-ink   { background: var(--paper-dk); color: var(--ink-mid); }
+
+  /* ── FLOW STEP ── */
+  .flow { display: flex; gap: 0; }
+  .flow-step {
+    flex: 1; text-align: center; padding: 16px 10px;
+    background: var(--paper-dk); position: relative;
+    border-right: none;
+  }
+  .flow-step:first-child { border-radius: 10px 0 0 10px; }
+  .flow-step:last-child { border-radius: 0 10px 10px 0; }
+  .flow-step::after {
+    content: '→';
+    position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
+    font-size: 16px; color: var(--ink-lt); z-index: 1;
+  }
+  .flow-step:last-child::after { display: none; }
+  .flow-icon { font-size: 20px; margin-bottom: 6px; }
+  .flow-lbl { font-size: 11px; font-weight: 600; color: var(--ink); }
+  .flow-sub { font-size: 10px; color: var(--ink-lt); margin-top: 2px; }
+
+  /* ── PROGRESS COLS ── */
+  .prog-row { display: grid; grid-template-columns: 160px 1fr 55px; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .prog-lbl { font-size: 12px; color: var(--ink-mid); }
+  .prog-track { height: 8px; background: var(--paper-dk); border-radius: 4px; overflow: hidden; }
+  .prog-fill { height: 100%; border-radius: 4px; }
+  .prog-val { font-size: 12px; font-weight: 600; text-align: right; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+  /* ── SWOT ── */
+  .swot { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .swot-card { border-radius: 10px; padding: 16px; }
+  .swot-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .swot-list { font-size: 12px; line-height: 1.8; }
+
+  /* ── STAR INSIGHT ── */
+  .insight {
+    background: var(--clay); color: #fff;
+    border-radius: 12px; padding: 22px 26px;
+    font-size: 15px; font-weight: 500; line-height: 1.65;
+    margin: 20px 0;
+  }
+  .insight strong { text-decoration: underline; text-decoration-color: rgba(255,255,255,0.5); }
+
+  /* ── SMALL INFO ROW ── */
+  .info-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .info-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--clay); flex-shrink: 0; margin-top: 7px; }
+  .info-text { font-size: 13px; color: var(--ink-mid); line-height: 1.6; }
+  .info-text strong { color: var(--ink); }
+
+  /* ── WATERMARK ── */
+  .footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 11px; color: var(--ink-lt); display: flex; justify-content: space-between; }
+
+  /* ── CHANNEL FUNNEL ── */
+  .funnel { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+  .funnel-row { border-radius: 6px; display: flex; align-items: center; justify-content: space-between; padding: 9px 16px; color: #fff; font-size: 12px; font-weight: 500; }
+
+  /* page-break sections */
+  .page-break { border-top: 3px solid var(--clay); margin-top: 56px; padding-top: 4px; }
+
+  @media print {
+    .cover { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<div class="cover">
+  <div class="cover-eyebrow">Complete India Market Intelligence · June 2026</div>
+  <h1 class="cover-title">Multani Mitti<br><span>India Full Market</span><br>Report</h1>
+  <p class="cover-sub">How many shops sell it · Who manufactures it · Who uses it · How the export chain works · Every number you need to build or grow a business in this space.</p>
+  <div class="cover-pills">
+    <span class="pill pill-clay">6.2% CAGR Global</span>
+    <span class="pill pill-sage">India = 91% of World Exports</span>
+    <span class="pill pill-earth">₹10 Cr+ Domestic Segment</span>
+    <span class="pill pill-out">12–20 Million Retail Outlets</span>
+    <span class="pill pill-out">601 Indian Exporters</span>
+  </div>
+</div>
+
+<!-- ══════════════ BODY ══════════════ -->
+<div class="report-body">
+
+  <!-- ═══ SECTION 1: TOTAL INDIA SHOP ECOSYSTEM ═══ -->
+  <div class="sec-head">
+    <div class="sec-num">Section 01</div>
+    <h2 class="sec-title">Total India Retail Shop Ecosystem</h2>
+  </div>
+
+  <div class="highlight">
+    <strong>India is the world's largest "nation of shopkeepers."</strong> The total retail ecosystem includes 12–20 million kirana/general stores, 800,000+ chemist shops, 143,000+ beauty parlours, 88,000+ registered salons, and millions of street vendors — creating an unmatched distribution pipeline for any FMCG product including Multani Mitti.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi accent">
+      <div class="kpi-label">Total Kirana / General Stores</div>
+      <div class="kpi-value">12–20M</div>
+      <div class="kpi-sub">India's backbone retail network</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Registered Beauty Parlours</div>
+      <div class="kpi-value">1,43,343</div>
+      <div class="kpi-sub">93.7% are single-owner units</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Salons (Organised Chains)</div>
+      <div class="kpi-value">13,000+</div>
+      <div class="kpi-sub">Lakme, Naturals, Jawed Habib etc.</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Chemist / Pharma Shops</div>
+      <div class="kpi-value">7–10 Lakh</div>
+      <div class="kpi-sub">AIOCD estimate, all India</div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-title">Shop Types by Category</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-lbl">Kirana / General</div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--clay);"></div></div>
+          <div class="bar-val">12–20M</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Chemist Shops</div>
+          <div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--earth);"></div></div>
+          <div class="bar-val">7–10L</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Grocery (Modern)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:6%;background:var(--sage);"></div></div>
+          <div class="bar-val">8,000+</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Beauty Parlours</div>
+          <div class="bar-track"><div class="bar-fill" style="width:2%;background:#7F77DD;"></div></div>
+          <div class="bar-val">1.43L</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Organised Salons</div>
+          <div class="bar-track"><div class="bar-fill" style="width:1%;background:#D4537E;"></div></div>
+          <div class="bar-val">13,000+</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Top States — Beauty Parlours</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-lbl">Maharashtra</div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--clay);"></div></div>
+          <div class="bar-val">18,684</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Uttar Pradesh</div>
+          <div class="bar-track"><div class="bar-fill" style="width:89%;background:var(--clay);"></div></div>
+          <div class="bar-val">16,671</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Tamil Nadu</div>
+          <div class="bar-track"><div class="bar-fill" style="width:67%;background:var(--earth);"></div></div>
+          <div class="bar-val">12,603</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Karnataka</div>
+          <div class="bar-track"><div class="bar-fill" style="width:52%;background:var(--earth);"></div></div>
+          <div class="bar-val">~9,800</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Gujarat</div>
+          <div class="bar-track"><div class="bar-fill" style="width:43%;background:var(--sage);"></div></div>
+          <div class="bar-val">~8,100</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Key insight:</strong> Out of India's 12–20 million kirana stores, over 90% of FMCG sales happen through this channel. A Multani Mitti brand that penetrates even 5% of kirana stores reaches <strong>6–10 lakh shops</strong> — a distribution scale that dwarfs most beauty brands.
+  </div>
+
+
+  <!-- ═══ SECTION 2: HOW MANY SELL MULTANI MITTI ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 02</div>
+    <h2 class="sec-title">How Many Shops Sell Multani Mitti in India?</h2>
+  </div>
+
+  <div class="highlight">
+    <strong>Multani Mitti is one of India's most widely distributed beauty commodities.</strong> It is sold in kirana stores, chemist shops, beauty parlours, Ayurvedic stores, supermarkets, and online. Estimated total retail touchpoints where Multani Mitti is available: <strong>15–25 lakh outlets</strong> across India (including all formats).
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">Estimated Retail Penetration by Channel</div>
+    <div class="bar-chart">
+      <div class="bar-row" style="grid-template-columns:200px 1fr 120px;">
+        <div class="bar-lbl">Kirana / General Stores</div>
+        <div class="bar-track"><div class="bar-fill" style="width:85%;background:var(--clay);"></div></div>
+        <div class="bar-val">~10–15 lakh shops</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 120px;">
+        <div class="bar-lbl">Chemist / Ayurvedic Stores</div>
+        <div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--earth);"></div></div>
+        <div class="bar-val">~3–5 lakh shops</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 120px;">
+        <div class="bar-lbl">Beauty Parlours / Salons</div>
+        <div class="bar-track"><div class="bar-fill" style="width:38%;background:#7F77DD;"></div></div>
+        <div class="bar-val">~60,000+</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 120px;">
+        <div class="bar-lbl">Online (Amazon/Flipkart/Nykaa)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--sage);"></div></div>
+        <div class="bar-val">1,000+ SKUs online</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 120px;">
+        <div class="bar-lbl">Supermarket / Modern Retail</div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:#D4537E;"></div></div>
+        <div class="bar-val">8,000+ stores</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Who Buys — Consumer Breakdown</div>
+      <svg viewBox="0 0 220 220" width="100%" style="max-width:220px;display:block;margin:0 auto 12px;">
+        <!-- Donut Chart: Women 55%, Men 20%, Salons 15%, Industrial 10% -->
+        <circle r="70" cx="110" cy="110" fill="none" stroke="#F0EBE3" stroke-width="36"/>
+        <circle r="70" cx="110" cy="110" fill="none" stroke="#C7622A" stroke-width="36"
+          stroke-dasharray="241.4 198.6" stroke-dashoffset="0" transform="rotate(-90 110 110)"/>
+        <circle r="70" cx="110" cy="110" fill="none" stroke="#8B6914" stroke-width="36"
+          stroke-dasharray="87.8 352.2" stroke-dashoffset="-241.4" transform="rotate(-90 110 110)"/>
+        <circle r="70" cx="110" cy="110" fill="none" stroke="#3A7D44" stroke-width="36"
+          stroke-dasharray="65.9 374.1" stroke-dashoffset="-329.2" transform="rotate(-90 110 110)"/>
+        <circle r="70" cx="110" cy="110" fill="none" stroke="#7F77DD" stroke-width="36"
+          stroke-dasharray="43.9 396.1" stroke-dashoffset="-395.1" transform="rotate(-90 110 110)"/>
+        <text x="110" y="106" text-anchor="middle" font-size="18" font-weight="700" fill="#1A1410" font-family="Syne,sans-serif">B2C</text>
+        <text x="110" y="124" text-anchor="middle" font-size="11" fill="#8A7A6E" font-family="Inter,sans-serif">Consumer Split</text>
+      </svg>
+      <div class="dl-row"><span class="dl-swatch" style="background:#C7622A;"></span>Women (home use) <span class="dl-pct">55%</span></div>
+      <div class="dl-row"><span class="dl-swatch" style="background:#8B6914;"></span>Men (grooming) <span class="dl-pct">20%</span></div>
+      <div class="dl-row"><span class="dl-swatch" style="background:#3A7D44;"></span>Salons / Parlours <span class="dl-pct">15%</span></div>
+      <div class="dl-row"><span class="dl-swatch" style="background:#7F77DD;"></span>Industrial/B2B <span class="dl-pct">10%</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Key Facts — Retail Presence</div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Unbranded / Loose Mitti:</strong> Still sold by weight in thousands of mandi stalls and kirana stores, especially in tier-2 and rural India. Typically ₹10–30 per 100g.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Branded SKUs online:</strong> 1,000+ product listings across Amazon, Flipkart, Nykaa, and Meesho. 270 million Indians shopped online in 2024.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Salon use:</strong> Over 60% of registered beauty parlours in India use Multani Mitti for face pack treatments. It is the most common base clay in Indian facial services.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Chemist / Ayurveda:</strong> Most chemist shops stock 2–4 Multani Mitti brands (Patanjali, Khadi, local brand), especially in North and West India.</div></div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 3: MANUFACTURING ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 03</div>
+    <h2 class="sec-title">Manufacturing — Who Produces It & How</h2>
+  </div>
+
+  <div class="highlight">
+    <strong>India holds 256.7 million tonnes of Fuller's Earth reserves</strong>, the largest in the world. Rajasthan's Barmer district alone supplies ~74% of all domestic Multani Mitti. The raw clay is extracted at nearly 100 feet depth, sun-dried, triple-inspected, and milled to superfine powder before sale.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Registered Manufacturers (IndiaMART)</div>
+      <div class="kpi-value">500+</div>
+      <div class="kpi-sub">Verified B2B suppliers listed</div>
+    </div>
+    <div class="kpi accent">
+      <div class="kpi-label">Total India Reserves</div>
+      <div class="kpi-value">256.7 MT</div>
+      <div class="kpi-sub">Million tonnes of Fuller's Earth</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Rajasthan's Share</div>
+      <div class="kpi-value">~74%</div>
+      <div class="kpi-sub">Barmer, Nagaur, Jodhpur</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Raw Price at Mine Gate</div>
+      <div class="kpi-value">₹4–50/kg</div>
+      <div class="kpi-sub">Depending on grade and purity</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">Full Production Flow — Mine to Market</div>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-icon">⛏️</div>
+        <div class="flow-lbl">Mining</div>
+        <div class="flow-sub">Barmer, Rajasthan<br>~100 ft depth</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">☀️</div>
+        <div class="flow-lbl">Sun Drying</div>
+        <div class="flow-sub">Natural drying<br>reduces moisture</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">🔍</div>
+        <div class="flow-lbl">Quality Check</div>
+        <div class="flow-sub">Triple inspection<br>colour, purity, grit</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">⚙️</div>
+        <div class="flow-lbl">Grinding</div>
+        <div class="flow-sub">Superfine milling<br>200–400 mesh</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">📦</div>
+        <div class="flow-lbl">Packaging</div>
+        <div class="flow-sub">100g, 200g, 500g<br>pouches / bulk bags</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">🚚</div>
+        <div class="flow-lbl">Dispatch</div>
+        <div class="flow-sub">Wholesaler / exporter<br>/ D2C brand</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Cost Breakdown per KG</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-lbl">Raw Clay (mine)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--clay);"></div></div>
+          <div class="bar-val">₹4–50</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Processing + Grinding</div>
+          <div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--earth);"></div></div>
+          <div class="bar-val">₹5–10</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Packaging (branded)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--sage);"></div></div>
+          <div class="bar-val">₹10–15</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Total Cost (branded)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:60%;background:#7F77DD;"></div></div>
+          <div class="bar-val">₹20–75</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Retail MRP (typical)</div>
+          <div class="bar-track"><div class="bar-fill" style="width:90%;background:#D4537E;"></div></div>
+          <div class="bar-val">₹80–200</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Production State Map</div>
+      <table>
+        <thead><tr><th>State</th><th>District</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td class="td-bold">Rajasthan</td><td>Barmer, Nagaur, Jodhpur, Pali, Sojat</td><td><span class="badge b-clay">Primary — 74%</span></td></tr>
+          <tr><td class="td-bold">Gujarat</td><td>Morbi, Valsad, Rajkot</td><td><span class="badge b-earth">Secondary</span></td></tr>
+          <tr><td class="td-bold">M.P.</td><td>Various districts</td><td><span class="badge b-ink">Minor</span></td></tr>
+          <tr><td class="td-bold">Tamil Nadu</td><td>Tiruppur, Southern belt</td><td><span class="badge b-ink">Minor</span></td></tr>
+          <tr><td class="td-bold">Andhra / Odisha</td><td>Ganjam, coastal belt</td><td><span class="badge b-sage">Processing hub</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 4: BUSINESS MODELS — HOW IT WORKS ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 04</div>
+    <h2 class="sec-title">How the Entire Business System Works</h2>
+  </div>
+
+  <div class="highlight">
+    <strong>The Multani Mitti supply chain has 6 levels</strong> — from mine owner to end customer. Each level adds value and margin. Understanding which level you enter at determines your investment, risk, and profit.
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">The 6-Level Multani Mitti Value Chain</div>
+    <table>
+      <thead><tr><th>#</th><th>Level</th><th>Who Are They</th><th>Buy Price</th><th>Sell Price</th><th>Margin</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-bold">1</td>
+          <td class="td-bold">Mine Owner / Extractor</td>
+          <td>Barmer mine operators, Rajasthan license holders</td>
+          <td>Cost of mining</td>
+          <td>₹4–8/kg (bulk)</td>
+          <td><span class="badge b-sage">Variable</span></td>
+        </tr>
+        <tr>
+          <td class="td-bold">2</td>
+          <td class="td-bold">Raw Material Processor</td>
+          <td>Units in Barmer, Sojat, Jodhpur that dry, sort, grind</td>
+          <td>₹4–8/kg</td>
+          <td>₹12–25/kg</td>
+          <td><span class="badge b-earth">~50–100%</span></td>
+        </tr>
+        <tr>
+          <td class="td-bold">3</td>
+          <td class="td-bold">Bulk Wholesaler</td>
+          <td>Traders in Delhi, Mumbai, Ahmedabad who buy in tonnes</td>
+          <td>₹12–25/kg</td>
+          <td>₹30–50/kg</td>
+          <td><span class="badge b-earth">20–40%</span></td>
+        </tr>
+        <tr>
+          <td class="td-bold">4</td>
+          <td class="td-bold">Brand / Packaging Unit</td>
+          <td>SMEs, home businesses, FMCG brands (Patanjali, Khadi etc.)</td>
+          <td>₹30–50/kg</td>
+          <td>₹80–250/kg (MRP)</td>
+          <td><span class="badge b-clay">50–70%</span></td>
+        </tr>
+        <tr>
+          <td class="td-bold">5</td>
+          <td class="td-bold">Distributor / Stockist</td>
+          <td>Regional distributors who supply retailers</td>
+          <td>Branded price</td>
+          <td>10–15% margin to retailer</td>
+          <td><span class="badge b-ink">8–12%</span></td>
+        </tr>
+        <tr>
+          <td class="td-bold">6</td>
+          <td class="td-bold">Retail / End Sale</td>
+          <td>Kirana stores, chemists, salons, Amazon/Flipkart sellers</td>
+          <td>Distributor rate</td>
+          <td>MRP / Customer price</td>
+          <td><span class="badge b-sage">15–25%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Common Business Models</div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Home Packing Unit (₹30K+):</strong> Buy raw mitti from Barmer supplier, pack at home in branded pouches. 300 packets/day × ₹26.6 margin = ₹8,000/day profit. Very low risk.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Online D2C Brand (₹2–5L):</strong> Brand + Amazon/Nykaa/Flipkart seller account. Focus on organic, Ayurvedic positioning. Many small brands do ₹5–15L/month revenue.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Wholesale Supply to Salons (₹2–4L):</strong> Buy in bulk, supply 200–500g pouches to local parlours. Recurring B2B relationship. Very stable income stream.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>B2B Manufacturer (₹15–50L):</strong> Set up processing unit, supply to cosmetics brands as private label. Long-term contracts. Scalable and export-ready.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Export House (₹50L+):</strong> ISO/GMP certified, IEC code, Alibaba listing, international courier/freight tie-up. Supply to Indian diaspora worldwide.</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Profit Potential — Investment vs Return</div>
+      <div class="funnel">
+        <div class="funnel-row" style="width:100%;background:var(--clay);">
+          Home Unit (₹30K) → ₹8,000/day profit possible
+        </div>
+        <div class="funnel-row" style="width:90%;background:var(--clay-dk);">
+          Small Brand (₹5L) → ₹30,000–80,000/month
+        </div>
+        <div class="funnel-row" style="width:78%;background:var(--earth);">
+          Mid Unit (₹20L) → ₹1–3L/month
+        </div>
+        <div class="funnel-row" style="width:64%;background:#5A7A30;">
+          B2B Manufacturer (₹50L) → ₹5–15L/month
+        </div>
+        <div class="funnel-row" style="width:50%;background:#3A7D44;">
+          Export House (₹1 Cr+) → ₹20L+/month
+        </div>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--ink-lt);">* Figures are industry estimates based on KVIC project reports and IndiaMART market data. Actual results depend on efficiency, brand, and channel.</div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 5: EXPORT ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 05</div>
+    <h2 class="sec-title">Export Market — Complete Picture</h2>
+  </div>
+
+  <div class="highlight">
+    <strong>India dominates 91% of global Multani Mitti exports</strong> with 685 shipments (Jul 2024–Jun 2025) through 601 verified exporters reaching 164+ countries. Global Multani Mitti import-export market recorded <strong>710 total shipments</strong> in the latest 12-month period. Growth in imports was 54% YoY in the prior period.
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi accent">
+      <div class="kpi-label">India's Export Shipments</div>
+      <div class="kpi-value">685</div>
+      <div class="kpi-sub">Jul 2024 – Jun 2025 (Volza data)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Active Indian Exporters</div>
+      <div class="kpi-value">601</div>
+      <div class="kpi-sub">Verified exporters in last 12 months</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Global Buyers from India</div>
+      <div class="kpi-value">1,735</div>
+      <div class="kpi-sub">Buyers across 164+ countries</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">India's Global Share</div>
+      <div class="kpi-value">91%</div>
+      <div class="kpi-sub">Of all world Multani Mitti exports</div>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-bottom:16px;">
+    <div class="card">
+      <div class="card-title">Top Importing Countries (by shipment count)</div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-lbl">Canada 🇨🇦</div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--clay);"></div></div>
+          <div class="bar-val">35% · 50 ships</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">United States 🇺🇸</div>
+          <div class="bar-track"><div class="bar-fill" style="width:73%;background:var(--clay);"></div></div>
+          <div class="bar-val">18% · 26 ships</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">Australia 🇦🇺</div>
+          <div class="bar-track"><div class="bar-fill" style="width:49%;background:var(--earth);"></div></div>
+          <div class="bar-val">12% · 17 ships</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">UAE 🇦🇪</div>
+          <div class="bar-track"><div class="bar-fill" style="width:35%;background:var(--earth);"></div></div>
+          <div class="bar-val">10% · 46 ships*</div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-lbl">UK + Others 🌍</div>
+          <div class="bar-track"><div class="bar-fill" style="width:22%;background:var(--sage);"></div></div>
+          <div class="bar-val">25% · 160+ ctry</div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--ink-lt);margin-top:8px;">*UAE figure from Volza global import data across full year period</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Export Channel — How It Works</div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Step 1 — Get IEC Code:</strong> Import Export Code from DGFT. Mandatory for all Indian exporters. Takes 1–2 business days online.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Step 2 — Register on B2B Portals:</strong> Alibaba, IndiaMART Global, ExportersIndia.com. Upload product photos, pricing, MOQ.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Step 3 — Amazon Global Selling:</strong> Companies like MiNature (Ahmedabad) started with B2B Multani Mitti supply, then launched own brand exporting to 6 countries with 20,000 customers/month.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Step 4 — Freight Forwarder:</strong> Tie up with air/sea freight agent. Most small shipments go via DHL/FedEx for quick commerce. Large orders via FCL/LCL containers.</div></div>
+      <div class="info-row"><div class="info-dot"></div><div class="info-text"><strong>Step 5 — Payment:</strong> SWIFT bank transfer, PayPal, or Payoneer. Letter of Credit (LC) for large institutional buyers.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Export Certifications Needed</div>
+    <div class="three-col">
+      <div>
+        <div class="badge b-clay" style="margin-bottom:6px;">IEC Code</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">Import Export Code — mandatory first step. Free from DGFT portal.</div>
+      </div>
+      <div>
+        <div class="badge b-earth" style="margin-bottom:6px;">ISO 9001 / GMP</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">Required for selling to EU, USA, Canada buyers.</div>
+      </div>
+      <div>
+        <div class="badge b-sage" style="margin-bottom:6px;">HALAL / Organic Cert</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">For Middle East and premium European markets. Commands 20–40% price premium.</div>
+      </div>
+      <div>
+        <div class="badge b-clay" style="margin-bottom:6px;">HSN Code 25084090</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">Primary HSN for raw Fuller's Earth export. Also 33049990 for cosmetic preparations.</div>
+      </div>
+      <div>
+        <div class="badge b-earth" style="margin-bottom:6px;">APEDA / DGFT</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">Regulatory body registration for agricultural-origin minerals and food-grade clay.</div>
+      </div>
+      <div>
+        <div class="badge b-sage" style="margin-bottom:6px;">FSSAI (if food grade)</div>
+        <div style="font-size:12px;color:var(--ink-mid);margin-top:4px;">For edible Multani Mitti or pharma-grade applications.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 6: COMPETITION ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 06</div>
+    <h2 class="sec-title">Competitive Landscape — All Players</h2>
+  </div>
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">Top Brands in India — Full Comparison</div>
+    <table>
+      <thead><tr><th>Brand</th><th>Segment</th><th>Price (100g)</th><th>Channels</th><th>Strength</th></tr></thead>
+      <tbody>
+        <tr><td class="td-bold">Patanjali</td><td>Mass Ayurvedic</td><td>₹25–35</td><td>Own stores, Kirana, online</td><td><span class="badge b-clay">Huge distribution reach</span></td></tr>
+        <tr><td class="td-bold">Khadi Natural</td><td>Heritage / Organic</td><td>₹60–80</td><td>Khadi stores, Amazon</td><td><span class="badge b-earth">Brand trust, govt backing</span></td></tr>
+        <tr><td class="td-bold">VedaOils</td><td>Premium B2B + B2C</td><td>₹90–130</td><td>Own site, bulk export</td><td><span class="badge b-sage">ISO certified, purity</span></td></tr>
+        <tr><td class="td-bold">MiNature</td><td>Export-focused organic</td><td>₹85–120</td><td>Amazon Global, 6 countries</td><td><span class="badge b-sage">20,000 customers/month</span></td></tr>
+        <tr><td class="td-bold">Deep Ayurveda</td><td>Ayurvedic premium</td><td>₹80–110</td><td>Amazon, Flipkart</td><td><span class="badge b-clay">Top rated on marketplaces</span></td></tr>
+        <tr><td class="td-bold">Neuherbs</td><td>Budget / high volume</td><td>₹45–70</td><td>Amazon, quick commerce</td><td><span class="badge b-earth">Aggressive pricing</span></td></tr>
+        <tr><td class="td-bold">Indus Valley</td><td>Organic skincare</td><td>₹90–150</td><td>E-comm, salon supply</td><td><span class="badge b-sage">Organic positioning</span></td></tr>
+        <tr><td class="td-bold">Local/Unbranded</td><td>Mass market loose</td><td>₹10–25</td><td>Kirana, mandi, wholesale</td><td><span class="badge b-ink">Price competitive</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Market Share Estimate (Domestic)</div>
+      <svg viewBox="0 0 260 180" width="100%">
+        <!-- Horizontal Bar Chart -->
+        <text x="0" y="20" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Patanjali</text>
+        <rect x="90" y="9" width="120" height="14" rx="3" fill="#C7622A"/>
+        <text x="215" y="20" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">30%</text>
+
+        <text x="0" y="44" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Unbranded</text>
+        <rect x="90" y="33" width="80" height="14" rx="3" fill="#8B6914"/>
+        <text x="175" y="44" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">20%</text>
+
+        <text x="0" y="68" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Khadi/VedaOils</text>
+        <rect x="90" y="57" width="60" height="14" rx="3" fill="#3A7D44"/>
+        <text x="155" y="68" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">15%</text>
+
+        <text x="0" y="92" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Online D2C brands</text>
+        <rect x="90" y="81" width="60" height="14" rx="3" fill="#7F77DD"/>
+        <text x="155" y="92" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">15%</text>
+
+        <text x="0" y="116" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Industrial/B2B</text>
+        <rect x="90" y="105" width="48" height="14" rx="3" fill="#D4537E"/>
+        <text x="143" y="116" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">12%</text>
+
+        <text x="0" y="140" font-size="10" fill="#8A7A6E" font-family="Inter,sans-serif">Others</text>
+        <rect x="90" y="129" width="32" height="14" rx="3" fill="#A0A0A0"/>
+        <text x="127" y="140" font-size="10" font-weight="600" fill="#1A1410" font-family="Inter,sans-serif">8%</text>
+      </svg>
+    </div>
+    <div class="card">
+      <div class="card-title">Top IndiaMART Suppliers (with price)</div>
+      <table>
+        <thead><tr><th>Supplier</th><th>Location</th><th>Min Price</th></tr></thead>
+        <tbody>
+          <tr><td>Mahadev Corporation</td><td>Rajasthan</td><td>₹6/kg</td></tr>
+          <tr><td>HNCO Organics Pvt Ltd</td><td>Multi-state</td><td>₹7/kg</td></tr>
+          <tr><td>Haritsons Earthgems</td><td>Gujarat</td><td>₹9/kg</td></tr>
+          <tr><td>Ganga Mehandi Udhyog</td><td>Rajasthan</td><td>₹8.5/kg</td></tr>
+          <tr><td>Pannchal Merrchant Pvt</td><td>Delhi NCR</td><td>₹9/kg</td></tr>
+          <tr><td>Shree Overseas Exports</td><td>Rajasthan</td><td>₹10/kg</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 7: SWOT + GROWTH ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 07</div>
+    <h2 class="sec-title">SWOT Analysis + Future Growth Outlook</h2>
+  </div>
+
+  <div class="swot" style="margin-bottom:24px;">
+    <div class="swot-card" style="background:#FDF3EE;">
+      <div class="swot-title" style="color:var(--clay-dk);">💪 Strengths</div>
+      <div class="swot-list" style="color:var(--clay-dk);">
+        · India controls 91%+ of global exports<br>
+        · 256.7 million tonne domestic reserves<br>
+        · Mineral mined at just ₹4–8/kg<br>
+        · Centuries of consumer trust & recognition<br>
+        · Multi-sector demand: beauty, pharma, industrial<br>
+        · Very low entry cost for entrepreneurs
+      </div>
+    </div>
+    <div class="swot-card" style="background:#FFF9E8;">
+      <div class="swot-title" style="color:var(--earth);">⚠️ Weaknesses</div>
+      <div class="swot-list" style="color:var(--earth);">
+        · Mostly unorganised sector, poor quality control<br>
+        · No GI tag or single quality standard<br>
+        · Low global brand recognition for Indian labels<br>
+        · Production concentrated in single belt (Barmer)<br>
+        · Adulteration common in unbranded segment<br>
+        · R&D investment is minimal across industry
+      </div>
+    </div>
+    <div class="swot-card" style="background:#EDF6EF;">
+      <div class="swot-title" style="color:var(--sage);">🌱 Opportunities</div>
+      <div class="swot-list" style="color:var(--sage);">
+        · Global natural beauty trend growing 10%+ CAGR<br>
+        · Indian diaspora markets in Canada, USA, UK, UAE<br>
+        · Ayurveda export boom (16% global CAGR)<br>
+        · Private label manufacturing for global brands<br>
+        · Quick commerce channels (Blinkit, Zepto, Swiggy)<br>
+        · Value-added blends (neem, rose, sandalwood) at 5x price
+      </div>
+    </div>
+    <div class="swot-card" style="background:#FAECEC;">
+      <div class="swot-title" style="color:#A32D2D;">🔴 Threats</div>
+      <div class="swot-list" style="color:#A32D2D;">
+        · Competition from synthetic bentonite alternatives<br>
+        · Pakistan exports competing in Middle East market<br>
+        · Mining regulation changes in Rajasthan<br>
+        · Climate change affecting clay quality over time<br>
+        · Price undercutting by low-quality unorganised players<br>
+        · Amazon/platform algorithm changes affecting D2C brands
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Growth Forecast — Key Numbers</div>
+    <div class="bar-chart">
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">Global Market 2020</div>
+        <div class="bar-track"><div class="bar-fill" style="width:30%;background:var(--clay);"></div></div>
+        <div class="bar-val">USD 25.2 Million</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">Global CAGR 2021–28</div>
+        <div class="bar-track"><div class="bar-fill" style="width:40%;background:var(--clay);"></div></div>
+        <div class="bar-val">6.2% annually</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">India Domestic CAGR</div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%;background:var(--earth);"></div></div>
+        <div class="bar-val">8–10% annually</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">India Beauty Salon Mkt</div>
+        <div class="bar-track"><div class="bar-fill" style="width:65%;background:var(--sage);"></div></div>
+        <div class="bar-val">$11.65B → $23B by 2033</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">Global Import Growth</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%;background:#7F77DD;"></div></div>
+        <div class="bar-val">54% YoY (2023–24)</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:200px 1fr 160px;">
+        <div class="bar-lbl">Ayurveda Export CAGR</div>
+        <div class="bar-track"><div class="bar-fill" style="width:90%;background:#D4537E;"></div></div>
+        <div class="bar-val">16%+ globally</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══ SECTION 8: ACTION GUIDE ═══ -->
+  <div class="page-break"></div>
+  <div class="sec-head" style="margin-top:32px;">
+    <div class="sec-num">Section 08</div>
+    <h2 class="sec-title">Action Guide — Start Your Multani Mitti Business</h2>
+  </div>
+
+  <div class="insight">
+    <strong>The single most important number:</strong> 12–20 million kirana stores exist in India. Just 1 lakh of them ordering 1 kg/month = 1,200 tonnes/month in distribution volume. The market is huge, underpenetrated at the branded level, and accessible with very low capital.
+  </div>
+
+  <div class="card">
+    <div class="card-title">Start Smart — Step by Step</div>
+    <table>
+      <thead><tr><th>Step</th><th>Action</th><th>Cost</th><th>Timeline</th></tr></thead>
+      <tbody>
+        <tr><td class="td-bold">1</td><td>Register business — Udyam/MSME + GST (mandatory)</td><td>₹0–1,000</td><td>3–7 days</td></tr>
+        <tr><td class="td-bold">2</td><td>Source raw Multani Mitti from Barmer via IndiaMART</td><td>₹6–10/kg (MOQ 50 kg)</td><td>Immediate</td></tr>
+        <tr><td class="td-bold">3</td><td>Get packaging designed (logo, pouch, label)</td><td>₹3,000–10,000</td><td>1 week</td></tr>
+        <tr><td class="td-bold">4</td><td>List on Amazon / Flipkart / Meesho seller account</td><td>Free / ₹499 plan</td><td>2–3 days</td></tr>
+        <tr><td class="td-bold">5</td><td>Supply to 20 local beauty parlours as B2B trial</td><td>Stock cost only</td><td>Week 1</td></tr>
+        <tr><td class="td-bold">6</td><td>Get ISO 9001 + GMP (for export/premium positioning)</td><td>₹30,000–80,000</td><td>2–3 months</td></tr>
+        <tr><td class="td-bold">7</td><td>Get IEC Code from DGFT for exports</td><td>₹500</td><td>1–2 days</td></tr>
+        <tr><td class="td-bold">8</td><td>List on Alibaba + Amazon Global Selling</td><td>$399/year Alibaba Gold</td><td>1 week</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <div class="footer">
+    <span>Multani Mitti India Market Report 2025–26 · Compiled June 2026</span>
+    <span>Sources: Volza Global Trade Data · KVIC PMEGP · IndiaMART · Eximpedia · Ken Research · CB Insights · RentechDigital</span>
+  </div>
+
+</div>
+</body>
+</html>
